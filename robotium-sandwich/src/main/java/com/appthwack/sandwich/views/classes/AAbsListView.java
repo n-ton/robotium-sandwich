@@ -42,7 +42,6 @@ public class AAbsListView extends AAdapterView implements IAAbsListView {
     /* (non-Javadoc)
      * @see com.appthwack.sandwich.views.interfaces.IAAbsListView#getItemAt(int)
      */
-    @Override
     public IAView getItemAt(int line) {
         View view = getAndWaitForView();
         AbsListView listView = (AbsListView) view;
@@ -61,7 +60,6 @@ public class AAbsListView extends AAdapterView implements IAAbsListView {
     /* (non-Javadoc)
      * @see com.appthwack.sandwich.views.interfaces.IAAbsListView#clickInList(int)
      */
-    @Override
     public void clickInList(int line) {
         IAView listItemElement = getItemAt(line);
         listItemElement.click();
