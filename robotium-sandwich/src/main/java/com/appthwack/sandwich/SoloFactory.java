@@ -2,7 +2,7 @@ package com.appthwack.sandwich;
 
 import android.app.Instrumentation;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.robotium.solo.Solo;
 
 // TODO: Auto-generated Javadoc
 /**

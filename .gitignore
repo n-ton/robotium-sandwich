@@ -1,0 +1,4 @@
+*.class
+robotium-sandwich/.idea/
+robotium-sandwich/robotium-sandwich.iml
+robotium-sandwich/target/

@@ -10,9 +10,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<platform.version> 4.1.1.4
-					</platform.version>
-		<android.plugin.version>3.6.0</android.plugin.version>
+		<platform.version>4.1.1.4</platform.version>
+        <platform-test.version>4.1.1.4</platform-test.version>
+		<android.plugin.version>3.9.0-rc.2</android.plugin.version>
+        <junit.version>4.11</junit.version>
+        <robotium.version>5.2.1</robotium.version>
 	</properties>
 
 	<dependencies>
@@ -25,17 +27,17 @@
 		<dependency>
 			<groupId>com.jayway.android.robotium</groupId>
 			<artifactId>robotium-solo</artifactId>
-			<version>4.3</version>
+			<version>${robotium.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>${junit.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android-test</artifactId>
-			<version>4.1.1.4</version>
+			<version>${platform-test.version}</version>
 		</dependency>
 	</dependencies>
 

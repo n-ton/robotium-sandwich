@@ -3,7 +3,8 @@ package com.appthwack.sandwich.views.classes;
 
 import java.text.MessageFormat;
 
-import junit.framework.Assert;
+import com.robotium.solo.Condition;
+import org.junit.Assert;
 import android.os.SystemClock;
 import android.view.View;
 
@@ -12,7 +13,7 @@ import com.appthwack.sandwich.SandwichSettings;
 import com.appthwack.sandwich.SoloFactory;
 import com.appthwack.sandwich.identifiers.AClass;
 import com.appthwack.sandwich.views.interfaces.IAView;
-import com.jayway.android.robotium.solo.Condition;
+import com.robotium.solo.Solo;
 
 
 // TODO: Auto-generated Javadoc

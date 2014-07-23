@@ -1,6 +1,6 @@
 package com.appthwack.sandwich;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 // TODO: Auto-generated Javadoc
 /**
