@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.appthwack.sandwich.identifiers;
 
@@ -9,6 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Interface ACssSelector.
  *
@@ -17,11 +18,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface ACssSelector {
-	
-	/**
-	 * Value.
-	 *
-	 * @return the string
-	 */
-	String value();
+
+    /**
+     * Value.
+     *
+     * @return the string
+     */
+    String value();
 }

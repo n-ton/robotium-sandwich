@@ -12,6 +12,4 @@ import com.appthwack.sandwich.identifiers.AClass;
 public class ASpinner extends AAbsSpinner {
 
 
-	
-	
 }

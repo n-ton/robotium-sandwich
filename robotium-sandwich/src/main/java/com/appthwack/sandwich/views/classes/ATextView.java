@@ -8,6 +8,7 @@ import com.appthwack.sandwich.identifiers.AClass;
 import com.appthwack.sandwich.views.interfaces.IATextView;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class ATextView.
  */
@@ -15,15 +16,14 @@ import com.appthwack.sandwich.views.interfaces.IATextView;
 public class ATextView extends AView implements IATextView {
 
 
-	
-	/* (non-Javadoc)
-	 * @see com.appthwack.sandwich.views.interfaces.IATextView#getText()
-	 */
-	@Override
-	public String getText() {
-		// TODO Auto-generated method stub
-		View view = getView();
-		return ((TextView)view).getText().toString();
-		
-	}
+    /* (non-Javadoc)
+     * @see com.appthwack.sandwich.views.interfaces.IATextView#getText()
+     */
+    @Override
+    public String getText() {
+        // TODO Auto-generated method stub
+        View view = getView();
+        return ((TextView) view).getText().toString();
+
+    }
 }

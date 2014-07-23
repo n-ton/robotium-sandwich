@@ -11,5 +11,5 @@ import com.appthwack.sandwich.identifiers.AClass;
 @AClass(GridView.class)
 public class AGridView extends AAbsListView {
 
-	
+
 }

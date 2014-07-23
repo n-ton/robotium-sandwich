@@ -12,8 +12,5 @@ import com.appthwack.sandwich.views.interfaces.IAAdapterView;
 @AClass(AdapterView.class)
 public abstract class AAdapterView extends AViewGroup implements IAAdapterView {
 
-	
-
-
 
 }

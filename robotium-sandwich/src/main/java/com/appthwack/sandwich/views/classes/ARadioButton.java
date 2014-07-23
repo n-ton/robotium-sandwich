@@ -10,6 +10,5 @@ import com.appthwack.sandwich.identifiers.AClass;
 @AClass(RadioButton.class)
 public class ARadioButton extends ACompoundButton {
 
-	
 
 }

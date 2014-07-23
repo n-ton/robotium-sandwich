@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Interface AId.
  */
@@ -13,10 +14,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AId {
 
-	/**
-	 * Value.
-	 *
-	 * @return the int
-	 */
-	int value();
+    /**
+     * Value.
+     *
+     * @return the int
+     */
+    int value();
 }

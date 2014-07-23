@@ -7,17 +7,18 @@ import java.lang.annotation.Target;
 
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Interface AIdName.
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AIdName {
-	
-	/**
-	 * Value.
-	 *
-	 * @return the string
-	 */
-	String value();
+
+    /**
+     * Value.
+     *
+     * @return the string
+     */
+    String value();
 }

@@ -11,6 +11,5 @@ import com.appthwack.sandwich.views.interfaces.IAButton;
 @AClass(Button.class)
 public class AButton extends ATextView implements IAButton {
 
-	
-	
+
 }
