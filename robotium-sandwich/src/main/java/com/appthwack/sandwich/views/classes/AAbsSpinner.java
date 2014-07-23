@@ -19,7 +19,7 @@ public class AAbsSpinner extends AAdapterView implements
 
     //Implementation based on Robotium by RenasR
     /* (non-Javadoc)
-	 * @see com.appthwack.sandwich.views.interfaces.IAAbsSpinner#selectItemAt(int)
+     * @see com.appthwack.sandwich.views.interfaces.IAAbsSpinner#selectItemAt(int)
 	 */
     @Override
     public void selectItemAt(int line) {

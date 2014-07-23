@@ -30,10 +30,15 @@ public class SandwichAssert {
      */
     public static void assertTrue(String message, boolean condition) {
         if (SandwichSettings.getAutomaticAssertsEnabled())
-            Assert.assertTrue(message, condition);
-        else if (!condition)
+            try {
+                Assert.assertTrue(message, condition);
+            } catch (AssertionError e) {
+                SoloFactory.getSolo().takeScreenshot("Error screenshot");
+                throw e;
+            }
+        else if (!condition) {
             SandwichLog.w(message);
-
+            SoloFactory.getSolo().takeScreenshot("Error screenshot");
+        }
     }
-
 }

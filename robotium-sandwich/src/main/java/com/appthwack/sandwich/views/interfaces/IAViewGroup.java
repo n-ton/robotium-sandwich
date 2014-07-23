@@ -13,5 +13,4 @@ public interface IAViewGroup extends IAView {
      * @return the count
      */
     public int getCount();
-
 }
