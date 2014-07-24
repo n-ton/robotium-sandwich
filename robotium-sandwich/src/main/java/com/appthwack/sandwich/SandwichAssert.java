@@ -28,26 +28,19 @@ public class SandwichAssert {
      * @param message   the message
      * @param condition the condition
      */
-//    public static void assertTrue(String message, boolean condition) {
-//        if (SandwichSettings.getAutomaticAssertsEnabled())
-//            try {
-//                Assert.assertTrue(message, condition);
-//            } catch (AssertionError e) {
-//                SoloFactory.getSolo().takeScreenshot("Error screenshot");
-//                throw e;
-//            }
-//        else if (!condition) {
-//            SandwichLog.w(message);
-//            SoloFactory.getSolo().takeScreenshot("Error screenshot");
-//        }
-//    }
     public static void assertTrue(String message, boolean condition) {
-        try {
+        if (SandwichSettings.getAutomaticAssertsEnabled())
             Assert.assertTrue(message, condition);
-        } catch (AssertionError e) {
-            SoloFactory.getSolo().takeScreenshot("Error screenshot");
+        else if (!condition) {
             SandwichLog.w(message);
-            throw e;
+        }
+    }
+
+    public static void assertEquals(String message, String expected, String actual) {
+        if (SandwichSettings.getAutomaticAssertsEnabled())
+            Assert.assertEquals(message, expected, actual);
+        else if (!(expected.equals(actual))) {
+            SandwichLog.w(message);
         }
     }
 }
