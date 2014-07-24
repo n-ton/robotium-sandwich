@@ -4,7 +4,7 @@ package com.appthwack.sandwich.views.classes;
 import java.text.MessageFormat;
 
 import com.robotium.solo.Condition;
-import org.junit.Assert;
+import junit.framework.Assert;
 import android.os.SystemClock;
 import android.view.View;
 
