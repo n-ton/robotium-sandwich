@@ -52,6 +52,7 @@ public class SandwichBaseTest<T extends Activity> extends ActivityInstrumentatio
         } catch (Throwable t) {
             String testCaseName = String.format("%s.%s", getClass().getName(), getName());
             SoloFactory.getSolo().takeScreenshot(testCaseName);
+            Log.w("Boom! Screenshot!", String.format("Captured screenshot for failed test: %s", testCaseName));
             throw t;
         }
     }
