@@ -31,7 +31,10 @@ public class SandwichBaseTest<T extends Activity> extends ActivityInstrumentatio
     protected void setUp() throws Exception {
         super.setUp();
         Instrumentation instrumentation = getInstrumentation();
+
+        //http://stackoverflow.com/questions/13514754/any-way-to-clear-default-shared-preferences-using-robotium
         PreferenceManager.getDefaultSharedPreferences(instrumentation.getTargetContext()).edit().clear().commit();
+
         Log.d("sandwich", "setup");
         SoloFactory.createSolo(instrumentation);
         this.getActivity();
