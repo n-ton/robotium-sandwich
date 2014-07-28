@@ -39,7 +39,7 @@ public class AScreen implements IAScreen {
      */
     public AScreen(Class<? extends Activity> activityClass) {
         SandwichLog = new SandwichLogger(this.getClass().getSimpleName());
-        for (Field field : this.getClass().getFields()) {
+        for (Field field : this.getClass().getDeclaredFields()) {
             initializeAElementField(field);
         }
         mActivityClass = activityClass;
@@ -55,14 +55,10 @@ public class AScreen implements IAScreen {
         AElementIdentifier elementIdentifier = AElementIdentifier.getAElementIdentifier(field);
         if (elementIdentifier != null) {
             Class<?> fieldType = field.getType();
-            Class<?>[] constructorArgTypes = new Class<?>[2];
-            constructorArgTypes[0] = AElementIdentifier.class;
-            constructorArgTypes[1] = AScreen.class;
-
-
             try {
                 AElementBase fieldValue = (AElementBase) fieldType.newInstance();
                 fieldValue.initialize(elementIdentifier, this, field.getName());
+                field.setAccessible(true);
                 field.set(this, fieldValue);
             } catch (InstantiationException e) {
                 // TODO Auto-generated catch block
@@ -80,7 +76,6 @@ public class AScreen implements IAScreen {
      */
     @Override
     public boolean waitFor(int timeout) {
-
         SandwichLog.d(MessageFormat.format("Waiting for activity {0} for {1} milliseconds", mActivityClass.getName(), timeout));
         boolean result = SoloFactory.getSolo().waitForCondition(new ActivityCondition(mActivityClass), timeout);
         SandwichAssert.assertTrue(MessageFormat.format("Timed out waiting for activity {0}, current activity is {1}", mActivityClass.getName(), SoloFactory.getSolo().getCurrentActivity().getClass().getName()), result);

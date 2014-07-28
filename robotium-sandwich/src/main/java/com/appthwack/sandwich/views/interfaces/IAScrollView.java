@@ -1,5 +1,7 @@
 package com.appthwack.sandwich.views.interfaces;
 
+import android.view.ViewGroup;
+
 /**
  * Created by Anton_Ostrenko on 7/24/14.
  */
@@ -11,5 +13,5 @@ public interface IAScrollView extends IAViewGroup {
      * @param index
      * @return the child at
      */
-    public IAView getChildAt(int index);
+    public ViewGroup getChildAt(int index);
 }
