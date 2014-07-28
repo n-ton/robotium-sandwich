@@ -2,6 +2,8 @@ package com.appthwack.sandwich;
 
 
 import android.app.Activity;
+import android.app.Instrumentation;
+import android.preference.PreferenceManager;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 
@@ -28,8 +30,10 @@ public class SandwichBaseTest<T extends Activity> extends ActivityInstrumentatio
      */
     protected void setUp() throws Exception {
         super.setUp();
+        Instrumentation instrumentation = getInstrumentation();
+        PreferenceManager.getDefaultSharedPreferences(instrumentation.getTargetContext()).edit().clear().commit();
         Log.d("sandwich", "setup");
-        SoloFactory.createSolo(getInstrumentation());
+        SoloFactory.createSolo(instrumentation);
         this.getActivity();
 
     }
