@@ -68,7 +68,6 @@ public class AScreen implements IAScreen {
                 e.printStackTrace();
             }
         }
-
     }
 
     /* (non-Javadoc)

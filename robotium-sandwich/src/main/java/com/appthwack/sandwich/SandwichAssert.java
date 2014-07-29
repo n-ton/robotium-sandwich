@@ -36,6 +36,13 @@ public class SandwichAssert {
         }
     }
 
+    /**
+     * Assert equals.
+     *
+     * @param message  the message
+     * @param expected the expected String object
+     * @param actual   the actual String object
+     */
     public static void assertEquals(String message, String expected, String actual) {
         if (SandwichSettings.getAutomaticAssertsEnabled())
             Assert.assertEquals(message, expected, actual);

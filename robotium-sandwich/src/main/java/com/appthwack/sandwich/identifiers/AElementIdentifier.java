@@ -92,8 +92,8 @@ public class AElementIdentifier {
         String idName = null;
         String name = null;
         Class<? extends View> elementClass = null;
-        if (elementField.getType().isAnnotationPresent(AClass.class))
-            elementClass = elementField.getType().getAnnotation(AClass.class).value();
+//        if (elementField.getType().isAnnotationPresent(AClass.class))
+//            elementClass = elementField.getType().getAnnotation(AClass.class).value();
         String text = null;
         String cssSelector = null;
 
